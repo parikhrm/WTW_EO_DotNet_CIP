@@ -7,12 +7,12 @@
   DTS:CreatorName="INT\parikhrm"
   DTS:DTSID="{16A47D9C-8036-4ED3-ABF6-FB617351DD9F}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{2D170BE6-D82E-4B22-9FEB-91452AA2E66F}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{4B783F6A-54C8-41C0-8584-9C78B71BAAC2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=A20-CB-DBSE01P;Initial Catalog=DRD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=A20-CB-DBSE01P;User ID=DRDUsers;Initial Catalog=DRD;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1sBkwyjY6UqB6/OGnaStEQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADHCpYO+ENIKUii9zjpF6wjAAAAAASAAACgAAAAEAAAACkfgm9A2VzbTY7LpNVxRScYAAAA+CsWhNx+V31RsoWXauYcTxne20wgzVJpFAAAAG4WyswOOngnYD6N4bSoX9Ptm/tu</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +42,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ParikhRm\OneDrive - Willis Towers Watson\EDS Backups\Dot Net Projects\TCTO_2022\EDS Roster\DateList.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CIP\Colleague Information Portal\DateList.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>

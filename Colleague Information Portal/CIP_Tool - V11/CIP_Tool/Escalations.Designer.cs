@@ -35,15 +35,6 @@
             this.searchby_associatename = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.datagridview_main = new System.Windows.Forms.DataGridView();
-            this.txtID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtEscalatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtAssociateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtReportingManager = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMailBoxType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSubjectLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtRDCComments = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtRequestorEmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtRequestorBusinessUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.requestoremailaddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,6 +54,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.summaryreport = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.escalation_appreciation = new System.Windows.Forms.ComboBox();
+            this.txtID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtEscalation_Appreciation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtEscalatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtAssociateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtReportingManager = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMailBoxType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSubjectLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtRDCComments = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtRequestorEmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtRequestorBusinessUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_main)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -136,6 +139,7 @@
             this.datagridview_main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridview_main.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtID,
+            this.txtEscalation_Appreciation,
             this.txtEscalatedDate,
             this.txtAssociateName,
             this.txtReportingManager,
@@ -147,78 +151,16 @@
             this.datagridview_main.Location = new System.Drawing.Point(11, 96);
             this.datagridview_main.Name = "datagridview_main";
             this.datagridview_main.ReadOnly = true;
+            this.datagridview_main.RowHeadersWidth = 62;
             this.datagridview_main.RowTemplate.Height = 28;
             this.datagridview_main.Size = new System.Drawing.Size(1538, 443);
             this.datagridview_main.TabIndex = 0;
             this.datagridview_main.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview_main_CellContentClick);
             // 
-            // txtID
-            // 
-            this.txtID.DataPropertyName = "ID";
-            this.txtID.HeaderText = "ID";
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            // 
-            // txtEscalatedDate
-            // 
-            this.txtEscalatedDate.DataPropertyName = "EscalatedDate";
-            this.txtEscalatedDate.HeaderText = "EscalatedDate";
-            this.txtEscalatedDate.Name = "txtEscalatedDate";
-            this.txtEscalatedDate.ReadOnly = true;
-            // 
-            // txtAssociateName
-            // 
-            this.txtAssociateName.DataPropertyName = "AssociateName";
-            this.txtAssociateName.HeaderText = "AssociateName";
-            this.txtAssociateName.Name = "txtAssociateName";
-            this.txtAssociateName.ReadOnly = true;
-            // 
-            // txtReportingManager
-            // 
-            this.txtReportingManager.DataPropertyName = "ReportingManager";
-            this.txtReportingManager.HeaderText = "ReportingManager";
-            this.txtReportingManager.Name = "txtReportingManager";
-            this.txtReportingManager.ReadOnly = true;
-            // 
-            // txtMailBoxType
-            // 
-            this.txtMailBoxType.DataPropertyName = "MailBoxType";
-            this.txtMailBoxType.HeaderText = "MailBoxType";
-            this.txtMailBoxType.Name = "txtMailBoxType";
-            this.txtMailBoxType.ReadOnly = true;
-            // 
-            // txtSubjectLine
-            // 
-            this.txtSubjectLine.DataPropertyName = "SubjectLine";
-            this.txtSubjectLine.HeaderText = "SubjectLine";
-            this.txtSubjectLine.Name = "txtSubjectLine";
-            this.txtSubjectLine.ReadOnly = true;
-            this.txtSubjectLine.Width = 400;
-            // 
-            // txtRDCComments
-            // 
-            this.txtRDCComments.DataPropertyName = "RDCComments";
-            this.txtRDCComments.HeaderText = "RCA Comments";
-            this.txtRDCComments.Name = "txtRDCComments";
-            this.txtRDCComments.ReadOnly = true;
-            this.txtRDCComments.Width = 400;
-            // 
-            // txtRequestorEmailAddress
-            // 
-            this.txtRequestorEmailAddress.DataPropertyName = "RequestorEmailAddress";
-            this.txtRequestorEmailAddress.HeaderText = "EscalatedBy";
-            this.txtRequestorEmailAddress.Name = "txtRequestorEmailAddress";
-            this.txtRequestorEmailAddress.ReadOnly = true;
-            // 
-            // txtRequestorBusinessUnit
-            // 
-            this.txtRequestorBusinessUnit.DataPropertyName = "RequestorBusinessUnit";
-            this.txtRequestorBusinessUnit.HeaderText = "RequestorBusinessUnit";
-            this.txtRequestorBusinessUnit.Name = "txtRequestorBusinessUnit";
-            this.txtRequestorBusinessUnit.ReadOnly = true;
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.escalation_appreciation);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.requestoremailaddress);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.reset);
@@ -256,9 +198,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.Size = new System.Drawing.Size(117, 40);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Escalated By";
+            this.label2.Text = "Escalated By/\r\nAppreciated By";
             // 
             // reset
             // 
@@ -295,7 +237,7 @@
             // 
             // rdccomments
             // 
-            this.rdccomments.Location = new System.Drawing.Point(129, 212);
+            this.rdccomments.Location = new System.Drawing.Point(160, 212);
             this.rdccomments.Multiline = true;
             this.rdccomments.Name = "rdccomments";
             this.rdccomments.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -315,7 +257,7 @@
             // 
             this.associatename.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.associatename.FormattingEnabled = true;
-            this.associatename.Location = new System.Drawing.Point(911, 29);
+            this.associatename.Location = new System.Drawing.Point(1095, 29);
             this.associatename.Name = "associatename";
             this.associatename.Size = new System.Drawing.Size(317, 28);
             this.associatename.TabIndex = 5;
@@ -324,7 +266,7 @@
             // 
             this.escalateddate.CustomFormat = " ";
             this.escalateddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.escalateddate.Location = new System.Drawing.Point(463, 26);
+            this.escalateddate.Location = new System.Drawing.Point(670, 26);
             this.escalateddate.Name = "escalateddate";
             this.escalateddate.Size = new System.Drawing.Size(290, 26);
             this.escalateddate.TabIndex = 3;
@@ -334,7 +276,7 @@
             // 
             // id
             // 
-            this.id.Location = new System.Drawing.Point(123, 29);
+            this.id.Location = new System.Drawing.Point(39, 28);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(100, 26);
             this.id.TabIndex = 1;
@@ -356,9 +298,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(7, 217);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 40);
+            this.label8.Size = new System.Drawing.Size(144, 40);
             this.label8.TabIndex = 12;
-            this.label8.Text = "RCA\r\nComments";
+            this.label8.Text = "RCA / Appreciation\r\nComments";
             // 
             // label6
             // 
@@ -381,7 +323,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(805, 29);
+            this.label4.Location = new System.Drawing.Point(989, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 40);
             this.label4.TabIndex = 4;
@@ -390,11 +332,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(322, 26);
+            this.label3.Location = new System.Drawing.Point(529, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 20);
+            this.label3.Size = new System.Drawing.Size(137, 40);
             this.label3.TabIndex = 2;
-            this.label3.Text = "EscalatedDate";
+            this.label3.Text = "EscalatedDate/\r\nAppreciation Date";
             // 
             // label1
             // 
@@ -409,11 +351,122 @@
             // 
             this.summaryreport.Location = new System.Drawing.Point(322, 13);
             this.summaryreport.Name = "summaryreport";
-            this.summaryreport.Size = new System.Drawing.Size(264, 41);
+            this.summaryreport.Size = new System.Drawing.Size(356, 41);
             this.summaryreport.TabIndex = 12;
-            this.summaryreport.Text = "Escalations Summary Report";
+            this.summaryreport.Text = "Escalations / Appreciation Summary Report";
             this.summaryreport.UseVisualStyleBackColor = true;
             this.summaryreport.Click += new System.EventHandler(this.summaryreport_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(161, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 40);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Escalation /\r\nAppreciation";
+            // 
+            // escalation_appreciation
+            // 
+            this.escalation_appreciation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.escalation_appreciation.FormattingEnabled = true;
+            this.escalation_appreciation.Items.AddRange(new object[] {
+            "Appreciation",
+            "Escalation"});
+            this.escalation_appreciation.Location = new System.Drawing.Point(265, 29);
+            this.escalation_appreciation.Name = "escalation_appreciation";
+            this.escalation_appreciation.Size = new System.Drawing.Size(241, 28);
+            this.escalation_appreciation.TabIndex = 18;
+            // 
+            // txtID
+            // 
+            this.txtID.DataPropertyName = "ID";
+            this.txtID.HeaderText = "ID";
+            this.txtID.MinimumWidth = 8;
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Width = 150;
+            // 
+            // txtEscalation_Appreciation
+            // 
+            this.txtEscalation_Appreciation.DataPropertyName = "Escalation_Appreciation";
+            this.txtEscalation_Appreciation.HeaderText = "Escalation / Appreciation";
+            this.txtEscalation_Appreciation.MinimumWidth = 8;
+            this.txtEscalation_Appreciation.Name = "txtEscalation_Appreciation";
+            this.txtEscalation_Appreciation.ReadOnly = true;
+            this.txtEscalation_Appreciation.Width = 150;
+            // 
+            // txtEscalatedDate
+            // 
+            this.txtEscalatedDate.DataPropertyName = "EscalatedDate";
+            this.txtEscalatedDate.HeaderText = "EscalatedDate / Appreciation Date";
+            this.txtEscalatedDate.MinimumWidth = 8;
+            this.txtEscalatedDate.Name = "txtEscalatedDate";
+            this.txtEscalatedDate.ReadOnly = true;
+            this.txtEscalatedDate.Width = 150;
+            // 
+            // txtAssociateName
+            // 
+            this.txtAssociateName.DataPropertyName = "AssociateName";
+            this.txtAssociateName.HeaderText = "AssociateName";
+            this.txtAssociateName.MinimumWidth = 8;
+            this.txtAssociateName.Name = "txtAssociateName";
+            this.txtAssociateName.ReadOnly = true;
+            this.txtAssociateName.Width = 150;
+            // 
+            // txtReportingManager
+            // 
+            this.txtReportingManager.DataPropertyName = "ReportingManager";
+            this.txtReportingManager.HeaderText = "ReportingManager";
+            this.txtReportingManager.MinimumWidth = 8;
+            this.txtReportingManager.Name = "txtReportingManager";
+            this.txtReportingManager.ReadOnly = true;
+            this.txtReportingManager.Width = 150;
+            // 
+            // txtMailBoxType
+            // 
+            this.txtMailBoxType.DataPropertyName = "MailBoxType";
+            this.txtMailBoxType.HeaderText = "MailBoxType";
+            this.txtMailBoxType.MinimumWidth = 8;
+            this.txtMailBoxType.Name = "txtMailBoxType";
+            this.txtMailBoxType.ReadOnly = true;
+            this.txtMailBoxType.Width = 150;
+            // 
+            // txtSubjectLine
+            // 
+            this.txtSubjectLine.DataPropertyName = "SubjectLine";
+            this.txtSubjectLine.HeaderText = "SubjectLine";
+            this.txtSubjectLine.MinimumWidth = 8;
+            this.txtSubjectLine.Name = "txtSubjectLine";
+            this.txtSubjectLine.ReadOnly = true;
+            this.txtSubjectLine.Width = 400;
+            // 
+            // txtRDCComments
+            // 
+            this.txtRDCComments.DataPropertyName = "RDCComments";
+            this.txtRDCComments.HeaderText = "RCA Comments";
+            this.txtRDCComments.MinimumWidth = 8;
+            this.txtRDCComments.Name = "txtRDCComments";
+            this.txtRDCComments.ReadOnly = true;
+            this.txtRDCComments.Width = 400;
+            // 
+            // txtRequestorEmailAddress
+            // 
+            this.txtRequestorEmailAddress.DataPropertyName = "RequestorEmailAddress";
+            this.txtRequestorEmailAddress.HeaderText = "EscalatedBy / Appreciated By";
+            this.txtRequestorEmailAddress.MinimumWidth = 8;
+            this.txtRequestorEmailAddress.Name = "txtRequestorEmailAddress";
+            this.txtRequestorEmailAddress.ReadOnly = true;
+            this.txtRequestorEmailAddress.Width = 150;
+            // 
+            // txtRequestorBusinessUnit
+            // 
+            this.txtRequestorBusinessUnit.DataPropertyName = "RequestorBusinessUnit";
+            this.txtRequestorBusinessUnit.HeaderText = "RequestorBusinessUnit";
+            this.txtRequestorBusinessUnit.MinimumWidth = 8;
+            this.txtRequestorBusinessUnit.Name = "txtRequestorBusinessUnit";
+            this.txtRequestorBusinessUnit.ReadOnly = true;
+            this.txtRequestorBusinessUnit.Width = 150;
             // 
             // Escalations
             // 
@@ -426,7 +479,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Name = "Escalations";
-            this.Text = "Escalations";
+            this.Text = "Escalations / Appreciations";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form8_Load);
             this.groupBox1.ResumeLayout(false);
@@ -463,7 +516,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox requestoremailaddress;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox searchby_reportingmanager;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button summaryreport;
+        private System.Windows.Forms.ComboBox escalation_appreciation;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtEscalation_Appreciation;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtEscalatedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtAssociateName;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtReportingManager;
@@ -472,8 +531,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRDCComments;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRequestorEmailAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRequestorBusinessUnit;
-        private System.Windows.Forms.TextBox searchby_reportingmanager;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button summaryreport;
     }
 }

@@ -105,10 +105,10 @@
             // 
             this.management_trainingdetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.management_trainingdetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.management_trainingdetails.Location = new System.Drawing.Point(51, 143);
+            this.management_trainingdetails.Location = new System.Drawing.Point(77, 143);
             this.management_trainingdetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.management_trainingdetails.Name = "management_trainingdetails";
-            this.management_trainingdetails.Size = new System.Drawing.Size(191, 41);
+            this.management_trainingdetails.Size = new System.Drawing.Size(250, 41);
             this.management_trainingdetails.TabIndex = 5;
             this.management_trainingdetails.Text = "Training Details";
             this.management_trainingdetails.UseVisualStyleBackColor = true;
@@ -118,10 +118,10 @@
             // 
             this.management_oneonone.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.management_oneonone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.management_oneonone.Location = new System.Drawing.Point(274, 90);
+            this.management_oneonone.Location = new System.Drawing.Point(362, 90);
             this.management_oneonone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.management_oneonone.Name = "management_oneonone";
-            this.management_oneonone.Size = new System.Drawing.Size(191, 41);
+            this.management_oneonone.Size = new System.Drawing.Size(250, 41);
             this.management_oneonone.TabIndex = 6;
             this.management_oneonone.Text = "One on One";
             this.management_oneonone.UseVisualStyleBackColor = true;
@@ -131,10 +131,10 @@
             // 
             this.management_skillmatrix.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.management_skillmatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.management_skillmatrix.Location = new System.Drawing.Point(51, 90);
+            this.management_skillmatrix.Location = new System.Drawing.Point(77, 90);
             this.management_skillmatrix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.management_skillmatrix.Name = "management_skillmatrix";
-            this.management_skillmatrix.Size = new System.Drawing.Size(191, 41);
+            this.management_skillmatrix.Size = new System.Drawing.Size(250, 41);
             this.management_skillmatrix.TabIndex = 7;
             this.management_skillmatrix.Text = "Skill Matrix";
             this.management_skillmatrix.UseVisualStyleBackColor = true;
@@ -144,10 +144,10 @@
             // 
             this.management_feedbackform.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.management_feedbackform.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.management_feedbackform.Location = new System.Drawing.Point(274, 41);
+            this.management_feedbackform.Location = new System.Drawing.Point(362, 41);
             this.management_feedbackform.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.management_feedbackform.Name = "management_feedbackform";
-            this.management_feedbackform.Size = new System.Drawing.Size(191, 41);
+            this.management_feedbackform.Size = new System.Drawing.Size(250, 41);
             this.management_feedbackform.TabIndex = 8;
             this.management_feedbackform.Text = "Feedback Form";
             this.management_feedbackform.UseVisualStyleBackColor = true;
@@ -164,9 +164,9 @@
             this.groupBox1.Controls.Add(this.general_oneonone);
             this.groupBox1.Controls.Add(this.general_teamdetails);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(524, 133);
+            this.groupBox1.Location = new System.Drawing.Point(466, 133);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(570, 282);
+            this.groupBox1.Size = new System.Drawing.Size(739, 282);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General Information";
@@ -175,10 +175,10 @@
             // 
             this.general_trainingdetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.general_trainingdetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.general_trainingdetails.Location = new System.Drawing.Point(274, 218);
+            this.general_trainingdetails.Location = new System.Drawing.Point(362, 217);
             this.general_trainingdetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_trainingdetails.Name = "general_trainingdetails";
-            this.general_trainingdetails.Size = new System.Drawing.Size(191, 41);
+            this.general_trainingdetails.Size = new System.Drawing.Size(250, 41);
             this.general_trainingdetails.TabIndex = 16;
             this.general_trainingdetails.Text = "Training Details";
             this.general_trainingdetails.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             this.general_roster.Location = new System.Drawing.Point(77, 217);
             this.general_roster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_roster.Name = "general_roster";
-            this.general_roster.Size = new System.Drawing.Size(191, 41);
+            this.general_roster.Size = new System.Drawing.Size(250, 41);
             this.general_roster.TabIndex = 15;
             this.general_roster.Text = "Roster";
             this.general_roster.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@
             this.general_errortracker.Location = new System.Drawing.Point(77, 163);
             this.general_errortracker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_errortracker.Name = "general_errortracker";
-            this.general_errortracker.Size = new System.Drawing.Size(191, 41);
+            this.general_errortracker.Size = new System.Drawing.Size(250, 41);
             this.general_errortracker.TabIndex = 14;
             this.general_errortracker.Text = "Error Tracker";
             this.general_errortracker.UseVisualStyleBackColor = true;
@@ -214,10 +214,10 @@
             // 
             this.general_pkt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.general_pkt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.general_pkt.Location = new System.Drawing.Point(274, 163);
+            this.general_pkt.Location = new System.Drawing.Point(362, 163);
             this.general_pkt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_pkt.Name = "general_pkt";
-            this.general_pkt.Size = new System.Drawing.Size(191, 41);
+            this.general_pkt.Size = new System.Drawing.Size(250, 41);
             this.general_pkt.TabIndex = 13;
             this.general_pkt.Text = "PKT";
             this.general_pkt.UseVisualStyleBackColor = true;
@@ -227,10 +227,10 @@
             // 
             this.general_kpiscorecard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.general_kpiscorecard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.general_kpiscorecard.Location = new System.Drawing.Point(274, 111);
+            this.general_kpiscorecard.Location = new System.Drawing.Point(362, 109);
             this.general_kpiscorecard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_kpiscorecard.Name = "general_kpiscorecard";
-            this.general_kpiscorecard.Size = new System.Drawing.Size(191, 41);
+            this.general_kpiscorecard.Size = new System.Drawing.Size(250, 41);
             this.general_kpiscorecard.TabIndex = 12;
             this.general_kpiscorecard.Text = "KPI Score Card";
             this.general_kpiscorecard.UseVisualStyleBackColor = true;
@@ -243,7 +243,7 @@
             this.general_ot.Location = new System.Drawing.Point(77, 111);
             this.general_ot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_ot.Name = "general_ot";
-            this.general_ot.Size = new System.Drawing.Size(191, 41);
+            this.general_ot.Size = new System.Drawing.Size(250, 41);
             this.general_ot.TabIndex = 11;
             this.general_ot.Text = "OT";
             this.general_ot.UseVisualStyleBackColor = true;
@@ -253,10 +253,10 @@
             // 
             this.general_oneonone.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.general_oneonone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.general_oneonone.Location = new System.Drawing.Point(274, 60);
+            this.general_oneonone.Location = new System.Drawing.Point(362, 60);
             this.general_oneonone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_oneonone.Name = "general_oneonone";
-            this.general_oneonone.Size = new System.Drawing.Size(191, 41);
+            this.general_oneonone.Size = new System.Drawing.Size(250, 41);
             this.general_oneonone.TabIndex = 10;
             this.general_oneonone.Text = "One On One";
             this.general_oneonone.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             this.general_teamdetails.Location = new System.Drawing.Point(77, 60);
             this.general_teamdetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.general_teamdetails.Name = "general_teamdetails";
-            this.general_teamdetails.Size = new System.Drawing.Size(191, 41);
+            this.general_teamdetails.Size = new System.Drawing.Size(250, 41);
             this.general_teamdetails.TabIndex = 9;
             this.general_teamdetails.Text = "Team Details";
             this.general_teamdetails.UseVisualStyleBackColor = true;
@@ -278,13 +278,13 @@
             // management_escalations
             // 
             this.management_escalations.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.management_escalations.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.management_escalations.Location = new System.Drawing.Point(51, 41);
+            this.management_escalations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.management_escalations.Location = new System.Drawing.Point(77, 41);
             this.management_escalations.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.management_escalations.Name = "management_escalations";
-            this.management_escalations.Size = new System.Drawing.Size(191, 41);
+            this.management_escalations.Size = new System.Drawing.Size(250, 41);
             this.management_escalations.TabIndex = 11;
-            this.management_escalations.Text = "Escalations";
+            this.management_escalations.Text = "Escalations / Appreciation";
             this.management_escalations.UseVisualStyleBackColor = true;
             this.management_escalations.Click += new System.EventHandler(this.management_escalations_Click);
             // 
@@ -296,9 +296,9 @@
             this.groupBox2.Controls.Add(this.management_trainingdetails);
             this.groupBox2.Controls.Add(this.management_skillmatrix);
             this.groupBox2.Controls.Add(this.management_oneonone);
-            this.groupBox2.Location = new System.Drawing.Point(524, 442);
+            this.groupBox2.Location = new System.Drawing.Point(466, 438);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(570, 221);
+            this.groupBox2.Size = new System.Drawing.Size(739, 221);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Management Portal";
@@ -307,10 +307,10 @@
             // 
             this.management_roster.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.management_roster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.management_roster.Location = new System.Drawing.Point(274, 143);
+            this.management_roster.Location = new System.Drawing.Point(362, 143);
             this.management_roster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.management_roster.Name = "management_roster";
-            this.management_roster.Size = new System.Drawing.Size(191, 41);
+            this.management_roster.Size = new System.Drawing.Size(250, 41);
             this.management_roster.TabIndex = 13;
             this.management_roster.Text = "Roster";
             this.management_roster.UseVisualStyleBackColor = true;

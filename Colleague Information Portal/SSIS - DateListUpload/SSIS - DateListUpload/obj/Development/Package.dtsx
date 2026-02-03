@@ -7,15 +7,32 @@
   DTS:CreatorName="INT\parikhrm"
   DTS:DTSID="{16A47D9C-8036-4ED3-ABF6-FB617351DD9F}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{A0DC21C2-9639-496E-988E-59DDE6D118B5}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{4B783F6A-54C8-41C0-8584-9C78B71BAAC2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[A20-CB-DBSE01P.DRD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B0D0523B-C4E7-4B50-9C4C-E71A553555DF}"
+      DTS:ObjectName="A20-CB-DBSE01P.DRD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=A20-CB-DBSE01P;User ID=DRDUsers;Initial Catalog=DRD;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1sBkwyjY6UqB6/OGnaStEQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACSs3MbNEEF5t/WUXknKMHeAAAAAASAAACgAAAAEAAAAJUO0ms2xO8iCqsN2YcUU2UYAAAAdSOA2Y3ZZsGuh62Cwd/fAe9zoC38++Q6FAAAAJBmrEXgL1WgyrBuDiNMKDz/CkJA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
@@ -25,19 +42,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ParikhRm\OneDrive - Willis Towers Watson\EDS Backups\Dot Net Projects\TCTO_2022\EDS Roster\DateList.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[MUM1-CB-DBSE01P.DRD]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{B0D0523B-C4E7-4B50-9C4C-E71A553555DF}"
-      DTS:ObjectName="MUM1-CB-DBSE01P.DRD">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=MUM1-CB-DBSE01P;Initial Catalog=DRD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CIP\Colleague Information Portal\DateList.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -292,8 +297,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MUM1-CB-DBSE01P.DRD]"
-                  connectionManagerRefId="Package.ConnectionManagers[MUM1-CB-DBSE01P.DRD]"
+                  connectionManagerID="Package.ConnectionManagers[A20-CB-DBSE01P.DRD]"
+                  connectionManagerRefId="Package.ConnectionManagers[A20-CB-DBSE01P.DRD]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -461,6 +466,10 @@
           Size="163.333333333334,42"
           Id="Package\Execute SQL Task"
           TopLeft="103.749998454005,27.7333328374227" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Type1 SCD Loading"
+          TopLeft="219.374996731058,186.549996664226" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="185.416665120671,69.7333328374227">
@@ -495,10 +504,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Type1 SCD Loading"
-          TopLeft="219.374996731058,186.549996664226" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="208.583332507561,156.466665558616">

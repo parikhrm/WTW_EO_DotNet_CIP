@@ -137,24 +137,24 @@ namespace CIP_Tool
                 if (string.IsNullOrEmpty(searchby_associatename.Text) && string.IsNullOrEmpty(searchby_reportingmanager.Text))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 order by ID ";
+                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments,Escalation_Appreciation from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 order by ID ";
                 }
                 else if (!string.IsNullOrEmpty(searchby_associatename.Text) && string.IsNullOrEmpty(searchby_reportingmanager.Text))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 and associatename like @associatename order by ID ";
+                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments,Escalation_Appreciation from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 and associatename like @associatename order by ID ";
                     cmd.Parameters.AddWithValue("@associatename", "%" + searchby_associatename.Text + "%");
                 }
                 else if (string.IsNullOrEmpty(searchby_associatename.Text) && !string.IsNullOrEmpty(searchby_reportingmanager.Text))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 and ReportingManager like @reportingmanager order by ID ";
+                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments,Escalation_Appreciation from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 and ReportingManager like @reportingmanager order by ID ";
                     cmd.Parameters.AddWithValue("@reportingmanager", "%" + searchby_reportingmanager.Text + "%");
                 }
                 else if (!string.IsNullOrEmpty(searchby_associatename.Text) && !string.IsNullOrEmpty(searchby_reportingmanager.Text))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 and ReportingManager like @reportingmanager and associatename like @associatename order by ID ";
+                    cmd.CommandText = "select ID,EscalatedDate,AssociateName,ReportingManager,MailBoxType,SubjectLine,RequestorEmailAddress,RequestorBusinessUnit,RDCComments,Escalation_Appreciation from dbo.tbl_escalations_cip_dotnet with(nolock) where isdeleted = 0 and ReportingManager like @reportingmanager and associatename like @associatename order by ID ";
                     cmd.Parameters.AddWithValue("@reportingmanager", "%" + searchby_reportingmanager.Text + "%");
                     cmd.Parameters.AddWithValue("@associatename", "%" + searchby_associatename.Text + "%");
                 }
@@ -210,6 +210,7 @@ namespace CIP_Tool
                     cmd.Parameters.AddWithValue("@MachineName",Environment.MachineName.ToString());
                     cmd.Parameters.Add("@Message", SqlDbType.NVarChar, 500);
                     cmd.Parameters["@Message"].Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("@Escalation_Appreciation",escalation_appreciation.Text);
 
                     
                     if (escalateddate.Text.Trim() == string.Empty)
@@ -232,7 +233,10 @@ namespace CIP_Tool
                     {
                         MessageBox.Show("Please update Escalated By");
                     }
-
+                    else if(string.IsNullOrEmpty(escalation_appreciation.Text))
+                    {
+                        MessageBox.Show("Please update Escalation / Appreciation");
+                    }
                     else
                     {
                         conn.Open();
@@ -298,7 +302,8 @@ namespace CIP_Tool
                     cmd.Parameters.Add("@Message", SqlDbType.NVarChar, 500);
                     cmd.Parameters["@Message"].Direction = ParameterDirection.Output;
                     cmd.Parameters.AddWithValue("@RequestorEmailAddress",requestoremailaddress.Text);
-                    
+                    cmd.Parameters.AddWithValue("@Escalation_Appreciation", escalation_appreciation.Text);
+
                     if (escalateddate.Text.Trim() == string.Empty)
                     {
                         MessageBox.Show("Please update Escalated Date");
@@ -318,6 +323,10 @@ namespace CIP_Tool
                     else if (string.IsNullOrEmpty(requestoremailaddress.Text))
                     {
                         MessageBox.Show("Please update Escalated By");
+                    }
+                    else if (string.IsNullOrEmpty(escalation_appreciation.Text))
+                    {
+                        MessageBox.Show("Please update Escalation / Appreciation");
                     }
                     else
                     {
@@ -356,6 +365,7 @@ namespace CIP_Tool
                 {
                     DataGridViewRow row = this.datagridview_main.Rows[e.RowIndex];
                     id.Text = row.Cells["txtID"].Value.ToString();
+                    escalation_appreciation.Text = row.Cells["txtEscalation_Appreciation"].Value.ToString();
                     escalateddate.Text = row.Cells["txtEscalatedDate"].Value.ToString();
                     escalateddate.CustomFormat = "dd-MMMM-yyyy";
                     associatename.Text = row.Cells["txtAssociateName"].Value.ToString();
