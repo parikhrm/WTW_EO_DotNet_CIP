@@ -326,3 +326,4 @@ C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CIP\Colleague Information Portal\CI
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CIP\Colleague Information Portal\CIP_Tool - V11\CIP_Tool\obj\Debug\CIP_Tool.csproj.Up2Date
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CIP\Colleague Information Portal\CIP_Tool - V11\CIP_Tool\obj\Debug\CIP_Tool.exe
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CIP\Colleague Information Portal\CIP_Tool - V11\CIP_Tool\obj\Debug\CIP_Tool.pdb
+C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CIP\Colleague Information Portal\CIP_Tool - V11\CIP_Tool\obj\Debug\CIP_Tool.DownTime_Tracker.resources
