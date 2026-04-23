@@ -271,7 +271,7 @@ namespace CIP_Tool
             else
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "usp_onedrive_audit_tracker_datagridview_search_dotnet";
+                cmd.CommandText = "dbo.usp_onedrive_audit_tracker_datagridview_search_dotnet";
                 cmd.Parameters.AddWithValue("@EmpName", searchby_empname.Text);
             }
             sda.SelectCommand = cmd;
