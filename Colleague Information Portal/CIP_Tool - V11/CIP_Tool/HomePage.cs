@@ -266,5 +266,12 @@ namespace CIP_Tool
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DownTime_Tracker obj_form1 = new DownTime_Tracker();
+            obj_form1.Show();
+        }
     }
 }

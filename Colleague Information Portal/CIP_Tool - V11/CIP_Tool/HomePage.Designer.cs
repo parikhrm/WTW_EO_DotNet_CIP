@@ -48,6 +48,7 @@
             this.management_escalations = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.management_roster = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -290,6 +291,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.management_roster);
             this.groupBox2.Controls.Add(this.management_escalations);
             this.groupBox2.Controls.Add(this.management_feedbackform);
@@ -298,7 +300,7 @@
             this.groupBox2.Controls.Add(this.management_oneonone);
             this.groupBox2.Location = new System.Drawing.Point(466, 438);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(739, 221);
+            this.groupBox2.Size = new System.Drawing.Size(739, 276);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Management Portal";
@@ -315,6 +317,19 @@
             this.management_roster.Text = "Roster";
             this.management_roster.UseVisualStyleBackColor = true;
             this.management_roster.Click += new System.EventHandler(this.management_roster_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(77, 203);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 41);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "DownTime Tracker";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // HomePage
             // 
@@ -363,6 +378,6 @@
         private System.Windows.Forms.Button management_roster;
         private System.Windows.Forms.Button general_roster;
         private System.Windows.Forms.Button general_trainingdetails;
-
+        private System.Windows.Forms.Button button1;
     }
 }
