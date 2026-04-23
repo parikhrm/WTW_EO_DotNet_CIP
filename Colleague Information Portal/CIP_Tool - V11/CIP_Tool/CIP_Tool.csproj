@@ -96,6 +96,12 @@
     <Compile Include="KPIScorecard.Designer.cs">
       <DependentUpon>KPIScorecard.cs</DependentUpon>
     </Compile>
+    <Compile Include="OneDrive_Audit_Tracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OneDrive_Audit_Tracker.Designer.cs">
+      <DependentUpon>OneDrive_Audit_Tracker.cs</DependentUpon>
+    </Compile>
     <Compile Include="OT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,7 @@
       <DependentUpon>OT.cs</DependentUpon>
     </Compile>
     <Compile Include="ProcessName.cs" />
+    <Compile Include="Quarters.cs" />
     <Compile Include="Roster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KPIScorecard.resx">
       <DependentUpon>KPIScorecard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneDrive_Audit_Tracker.resx">
+      <DependentUpon>OneDrive_Audit_Tracker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OT.resx">
       <DependentUpon>OT.cs</DependentUpon>

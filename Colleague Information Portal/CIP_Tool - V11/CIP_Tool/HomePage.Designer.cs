@@ -48,7 +48,8 @@
             this.management_escalations = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.management_roster = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.management_downtime_audit_tracker = new System.Windows.Forms.Button();
+            this.management_onedrive_audit_tracker = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -291,7 +292,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.management_onedrive_audit_tracker);
+            this.groupBox2.Controls.Add(this.management_downtime_audit_tracker);
             this.groupBox2.Controls.Add(this.management_roster);
             this.groupBox2.Controls.Add(this.management_escalations);
             this.groupBox2.Controls.Add(this.management_feedbackform);
@@ -318,18 +320,31 @@
             this.management_roster.UseVisualStyleBackColor = true;
             this.management_roster.Click += new System.EventHandler(this.management_roster_Click);
             // 
-            // button1
+            // management_downtime_audit_tracker
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(77, 203);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 41);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "DownTime Tracker";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.management_downtime_audit_tracker.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.management_downtime_audit_tracker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.management_downtime_audit_tracker.Location = new System.Drawing.Point(77, 196);
+            this.management_downtime_audit_tracker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.management_downtime_audit_tracker.Name = "management_downtime_audit_tracker";
+            this.management_downtime_audit_tracker.Size = new System.Drawing.Size(250, 41);
+            this.management_downtime_audit_tracker.TabIndex = 14;
+            this.management_downtime_audit_tracker.Text = "DownTime Audit Tracker";
+            this.management_downtime_audit_tracker.UseVisualStyleBackColor = true;
+            this.management_downtime_audit_tracker.Click += new System.EventHandler(this.management_downtime_audit_tracker_Click);
+            // 
+            // management_onedrive_audit_tracker
+            // 
+            this.management_onedrive_audit_tracker.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.management_onedrive_audit_tracker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.management_onedrive_audit_tracker.Location = new System.Drawing.Point(362, 196);
+            this.management_onedrive_audit_tracker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.management_onedrive_audit_tracker.Name = "management_onedrive_audit_tracker";
+            this.management_onedrive_audit_tracker.Size = new System.Drawing.Size(250, 41);
+            this.management_onedrive_audit_tracker.TabIndex = 15;
+            this.management_onedrive_audit_tracker.Text = "OneDrive Audit Tracker";
+            this.management_onedrive_audit_tracker.UseVisualStyleBackColor = true;
+            this.management_onedrive_audit_tracker.Click += new System.EventHandler(this.management_onedrive_audit_tracker_Click);
             // 
             // HomePage
             // 
@@ -378,6 +393,7 @@
         private System.Windows.Forms.Button management_roster;
         private System.Windows.Forms.Button general_roster;
         private System.Windows.Forms.Button general_trainingdetails;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button management_onedrive_audit_tracker;
+        private System.Windows.Forms.Button management_downtime_audit_tracker;
     }
 }

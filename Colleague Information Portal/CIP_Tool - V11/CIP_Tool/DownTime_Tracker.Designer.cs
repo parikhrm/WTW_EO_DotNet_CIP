@@ -173,9 +173,14 @@
             this.application.FormattingEnabled = true;
             this.application.Items.AddRange(new object[] {
             "AVD",
+            "D&B",
+            "Global Protect",
+            "KYC RDC login page",
+            "KYC WFT",
+            "Mailbox",
             "Maxsight",
-            "WiFi - Office",
-            "WFT - Bulk Upload"});
+            "Workpulse",
+            "WiFi - Office"});
             this.application.Location = new System.Drawing.Point(310, 32);
             this.application.Name = "application";
             this.application.Size = new System.Drawing.Size(253, 28);
@@ -279,6 +284,7 @@
             this.txt_ID.HeaderText = "ID";
             this.txt_ID.MinimumWidth = 8;
             this.txt_ID.Name = "txt_ID";
+            this.txt_ID.ReadOnly = true;
             this.txt_ID.Width = 150;
             // 
             // txt_Application
@@ -287,6 +293,7 @@
             this.txt_Application.HeaderText = "Application";
             this.txt_Application.MinimumWidth = 8;
             this.txt_Application.Name = "txt_Application";
+            this.txt_Application.ReadOnly = true;
             this.txt_Application.Width = 150;
             // 
             // txt_Date
@@ -295,6 +302,7 @@
             this.txt_Date.HeaderText = "Date";
             this.txt_Date.MinimumWidth = 8;
             this.txt_Date.Name = "txt_Date";
+            this.txt_Date.ReadOnly = true;
             this.txt_Date.Width = 150;
             // 
             // txt_StartTime
@@ -303,6 +311,7 @@
             this.txt_StartTime.HeaderText = "StartTime";
             this.txt_StartTime.MinimumWidth = 8;
             this.txt_StartTime.Name = "txt_StartTime";
+            this.txt_StartTime.ReadOnly = true;
             this.txt_StartTime.Width = 150;
             // 
             // txt_EndTime
@@ -311,6 +320,7 @@
             this.txt_EndTime.HeaderText = "EndTime";
             this.txt_EndTime.MinimumWidth = 8;
             this.txt_EndTime.Name = "txt_EndTime";
+            this.txt_EndTime.ReadOnly = true;
             this.txt_EndTime.Width = 150;
             // 
             // txt_Impacted_Users
@@ -319,6 +329,7 @@
             this.txt_Impacted_Users.HeaderText = "Impacted_Users";
             this.txt_Impacted_Users.MinimumWidth = 8;
             this.txt_Impacted_Users.Name = "txt_Impacted_Users";
+            this.txt_Impacted_Users.ReadOnly = true;
             this.txt_Impacted_Users.Width = 150;
             // 
             // txt_Comments
@@ -327,6 +338,7 @@
             this.txt_Comments.HeaderText = "Comments";
             this.txt_Comments.MinimumWidth = 8;
             this.txt_Comments.Name = "txt_Comments";
+            this.txt_Comments.ReadOnly = true;
             this.txt_Comments.Width = 150;
             // 
             // searchby_id

@@ -65,12 +65,12 @@ namespace CIP_Tool
             if (string.IsNullOrEmpty(searchby_id.Text))
             {
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from dbo.vw_downtime_tracker_dotnet order by ID desc";
+                cmd.CommandText = "select ID, Application, Date, StartTime, EndTime, Minutes, Impacted_Users, LastUpdatedBy, LastUpdatedDateTime, Comments  from dbo.vw_downtime_tracker_dotnet order by ID desc";
             }
             else
             {
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from dbo.vw_downtime_tracker_dotnet where ID = @ID order by ID desc";
+                cmd.CommandText = "select ID, Application, Date, StartTime, EndTime, Minutes, Impacted_Users, LastUpdatedBy, LastUpdatedDateTime, Comments from dbo.vw_downtime_tracker_dotnet where ID = @ID order by ID desc";
                 cmd.Parameters.AddWithValue("@ID", searchby_id.Text);
             }
             sda.SelectCommand = cmd;
