@@ -18,7 +18,7 @@ namespace CIP_Tool
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
-        public string connectionstringtxt = "Data Source=A20-CB-DBSE01P;Initial Catalog=DRD;User ID=DRDUsers;Password=24252425";
+        public string connectionstringtxt = "Data Source=A20-CB-DBSE01P;Initial Catalog=DRD;User ID=DRDUsers;Password=24252425; Connect Timeout=5000;";
 
         public OneDrive_Audit_Tracker()
         {
@@ -40,7 +40,6 @@ namespace CIP_Tool
             audit_quarter.SelectedIndex = -1;
             status.SelectedIndex = -1;
             comments.Text = string.Empty;
-            attachment.Text = string.Empty;
             insert.Enabled = true;
             update.Enabled = false;
             datagridview_display_overall();
@@ -98,9 +97,9 @@ namespace CIP_Tool
             }
             try
             {
-                string filePath = attachment.Text;
-                byte[] fileData = File.ReadAllBytes(filePath);
-                string fileName = Path.GetFileName(filePath);
+                //string filePath = attachment.Text;
+                //byte[] fileData = File.ReadAllBytes(filePath);
+                //string fileName = Path.GetFileName(filePath);
 
                 cmd.Parameters.Clear();
                 conn.ConnectionString = connectionstringtxt;
@@ -113,16 +112,7 @@ namespace CIP_Tool
                 cmd.Parameters.AddWithValue("@Audit_Quarter",audit_quarter.Text);
                 cmd.Parameters.AddWithValue("@Status", status.Text);
                 cmd.Parameters.AddWithValue("@Comments", comments.Text);
-                if (string.IsNullOrEmpty(attachment.Text))
-                {
-                    cmd.Parameters.AddWithValue("@Attachment", DBNull.Value);
-                    cmd.Parameters.AddWithValue("@FileName", DBNull.Value);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@Attachment", fileData);
-                    cmd.Parameters.AddWithValue("@FileName", fileName);
-                }
+                
                 cmd.Parameters.AddWithValue("@LastUpdatedBy", Environment.UserName.ToString());
                 
                 if (string.IsNullOrEmpty(empname.Text))
@@ -180,7 +170,7 @@ namespace CIP_Tool
                 cmd.Parameters.AddWithValue("@Audit_Quarter", audit_quarter.Text);
                 cmd.Parameters.AddWithValue("@Status", status.Text);
                 cmd.Parameters.AddWithValue("@Comments", comments.Text);
-                cmd.Parameters.AddWithValue("@Attachment", attachment.Text);
+                
                 cmd.Parameters.AddWithValue("@LastUpdatedBy", Environment.UserName.ToString());
 
                 if (string.IsNullOrEmpty(empname.Text))
@@ -266,7 +256,7 @@ namespace CIP_Tool
             if (string.IsNullOrEmpty(searchby_empname.Text))
             {
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select ID, EmpName, [Reporting Manager], Audit_Quarter, Status, Comments, Attachment, LastUpdatedBy, LastUpdatedDateTime  from dbo.vw_onedrive_audit_tracker_dotnet order by ID desc";
+                cmd.CommandText = "select ID, EmpName, [Reporting Manager], Audit_Quarter, Status, Comments, LastUpdatedBy, LastUpdatedDateTime  from dbo.vw_onedrive_audit_tracker_dotnet order by ID desc";
             }
             else
             {
@@ -304,13 +294,6 @@ namespace CIP_Tool
             }
         }
 
-        private void select_file_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                this.attachment.Text = openFileDialog1.FileName;
-            }
-        }
+       
     }
 }

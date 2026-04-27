@@ -32,13 +32,11 @@
             this.reset = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
             this.insert = new System.Windows.Forms.Button();
-            this.attachment = new System.Windows.Forms.TextBox();
             this.comments = new System.Windows.Forms.TextBox();
             this.status = new System.Windows.Forms.ComboBox();
             this.audit_quarter = new System.Windows.Forms.ComboBox();
             this.empname = new System.Windows.Forms.ComboBox();
             this.id = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,24 +53,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.raw_data = new System.Windows.Forms.Button();
-            this.select_file = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.select_file);
             this.groupBox1.Controls.Add(this.reset);
             this.groupBox1.Controls.Add(this.update);
             this.groupBox1.Controls.Add(this.insert);
-            this.groupBox1.Controls.Add(this.attachment);
             this.groupBox1.Controls.Add(this.comments);
             this.groupBox1.Controls.Add(this.status);
             this.groupBox1.Controls.Add(this.audit_quarter);
             this.groupBox1.Controls.Add(this.empname);
             this.groupBox1.Controls.Add(this.id);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -113,13 +107,6 @@
             this.insert.Text = "Insert";
             this.insert.UseVisualStyleBackColor = true;
             this.insert.Click += new System.EventHandler(this.insert_Click);
-            // 
-            // attachment
-            // 
-            this.attachment.Location = new System.Drawing.Point(773, 105);
-            this.attachment.Name = "attachment";
-            this.attachment.Size = new System.Drawing.Size(401, 26);
-            this.attachment.TabIndex = 11;
             // 
             // comments
             // 
@@ -165,15 +152,6 @@
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(100, 26);
             this.id.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(660, 105);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Attachment";
             // 
             // label5
             // 
@@ -333,16 +311,6 @@
             this.raw_data.UseVisualStyleBackColor = true;
             this.raw_data.Click += new System.EventHandler(this.raw_data_Click);
             // 
-            // select_file
-            // 
-            this.select_file.Location = new System.Drawing.Point(773, 148);
-            this.select_file.Name = "select_file";
-            this.select_file.Size = new System.Drawing.Size(140, 35);
-            this.select_file.TabIndex = 15;
-            this.select_file.Text = "Select File";
-            this.select_file.UseVisualStyleBackColor = true;
-            this.select_file.Click += new System.EventHandler(this.select_file_Click);
-            // 
             // OneDrive_Audit_Tracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -370,13 +338,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox attachment;
         private System.Windows.Forms.TextBox comments;
         private System.Windows.Forms.ComboBox status;
         private System.Windows.Forms.ComboBox audit_quarter;
         private System.Windows.Forms.ComboBox empname;
         private System.Windows.Forms.TextBox id;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -396,6 +362,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button raw_data;
-        private System.Windows.Forms.Button select_file;
     }
 }
