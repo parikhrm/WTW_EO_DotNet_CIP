@@ -55,6 +55,7 @@ namespace CIP_Tool
                 managementportal.Enabled = true;
                 management_downtime_audit_tracker.Enabled = true;
                 management_onedrive_audit_tracker.Enabled = true;
+                management_access_control.Enabled = false;
             }
             else if (accesslevel.Text == "Admin")
             {
@@ -67,6 +68,7 @@ namespace CIP_Tool
                 managementportal.Enabled = true;
                 management_downtime_audit_tracker.Enabled = true;
                 management_onedrive_audit_tracker.Enabled = true;
+                management_access_control.Enabled = true;
             }
             else
             {
@@ -79,6 +81,7 @@ namespace CIP_Tool
                 managementportal.Enabled = false;
                 management_downtime_audit_tracker.Enabled = false;
                 management_onedrive_audit_tracker.Enabled = false;
+                management_access_control.Enabled = false;
             }
         }
 
@@ -286,6 +289,12 @@ namespace CIP_Tool
             OneDrive_Audit_Tracker obj_form1 = new OneDrive_Audit_Tracker();
             obj_form1.Show();
         }
-    
+
+        private void management_access_control_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Access_Control obj_form1 = new Access_Control();
+            obj_form1.Show();
+        }
     }
 }
